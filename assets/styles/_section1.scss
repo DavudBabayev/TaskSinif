@@ -1,0 +1,56 @@
+.section1{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://preview.colorlib.com/theme/security/img/header-bg.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    .sec1{
+        display: flex;
+        min-height: 650px;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        h3, h1, p{
+            width: 65%;
+        }
+        h3{
+            font-weight: 100;
+            font-size: 16px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 14px;
+        }
+        a{
+            margin-top: 20px;
+            width: 20%;
+            background-color: orange;
+            border: 2px solid orange;
+            padding: 10px 20px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            transition: 0.5s ease;
+            &:hover{
+                background-color: transparent;
+                border: 2px solid orange;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .section1{
+        .sec1{
+            h3, h1, p{
+                width: 100%;
+            }
+            a{
+                width: 40%;
+            }
+        }
+    }
+}

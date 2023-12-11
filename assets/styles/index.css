@@ -1,0 +1,242 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding: 0 32px;
+  max-width: 1200px;
+}
+
+nav {
+  padding-top: 10px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+nav a {
+  color: white;
+}
+nav .nav1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  font-size: 12px;
+  color: white;
+}
+nav .nav1 .phone {
+  display: none;
+}
+nav .nav1 a {
+  font-size: 12px;
+  transition: 0.5s ease;
+}
+nav .nav1 a:hover {
+  color: orange;
+}
+nav .nav2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+nav .nav2 .menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav2 .menu li {
+  cursor: pointer;
+}
+nav .nav2 .menu a {
+  font-size: 12px;
+}
+nav .nav2 .menu a:hover {
+  color: orange;
+  transition: all 0.3s ease;
+}
+nav .nav2 .menu .drop {
+  position: relative;
+}
+nav .nav2 .menu .drop .drop-menu {
+  background-color: white;
+  position: absolute;
+  width: 140px;
+  padding: 14px;
+  left: 0;
+  top: 30px;
+  opacity: 0;
+  display: flex;
+  transition: opacity 0.5s ease;
+}
+nav .nav2 .menu .drop .drop-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+}
+nav .nav2 .menu .drop .drop-menu a:hover {
+  color: orange;
+  transition: all 0.3s ease;
+}
+nav .nav2 .menu .drop:hover .drop-menu {
+  z-index: 100;
+  opacity: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+nav .nav2 .click {
+  font-size: 24px;
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav .nav1 .phone {
+    display: inline;
+  }
+  nav .nav1 .number {
+    display: none;
+  }
+  nav .nav2 .menu {
+    display: none;
+  }
+  nav .nav2 .click {
+    display: flex;
+  }
+}
+.section1 {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://preview.colorlib.com/theme/security/img/header-bg.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+}
+.section1 .sec1 {
+  display: flex;
+  min-height: 650px;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.section1 .sec1 h3, .section1 .sec1 h1, .section1 .sec1 p {
+  width: 65%;
+}
+.section1 .sec1 h3 {
+  font-weight: 100;
+  font-size: 16px;
+}
+.section1 .sec1 h1 {
+  font-size: 50px;
+}
+.section1 .sec1 p {
+  font-size: 14px;
+}
+.section1 .sec1 a {
+  margin-top: 20px;
+  width: 20%;
+  background-color: orange;
+  border: 2px solid orange;
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.5s ease;
+}
+.section1 .sec1 a:hover {
+  background-color: transparent;
+  border: 2px solid orange;
+}
+
+@media screen and (max-width: 768px) {
+  .section1 .sec1 h3, .section1 .sec1 h1, .section1 .sec1 p {
+    width: 100%;
+  }
+  .section1 .sec1 a {
+    width: 40%;
+  }
+}
+.section2 {
+  width: 100%;
+}
+.section2 .sec2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-top: 100px;
+}
+.section2 .sec2 .sec21 {
+  text-align: center;
+}
+.section2 .sec2 .sec21 p {
+  color: gray;
+  font-weight: 300;
+}
+.section2 .sec2 .sec22 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section2 .sec2 .sec22 div {
+  flex: 1 1 calc(30% - 50px);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.5s ease;
+}
+.section2 .sec2 .sec22 div img {
+  width: 100%;
+  height: auto;
+}
+.section2 .sec2 .sec22 div a {
+  color: black;
+}
+.section2 .sec2 .sec22 div p {
+  font-size: 14px;
+  color: gray;
+}
+.section2 .sec2 .sec22 div:hover {
+  background-color: orange;
+}
+
+@media screen and (max-width: 768px) {
+  .section2 .sec2 .sec22 div {
+    flex: 1 1 calc(80% - 50px);
+  }
+}
+.section3 {
+  width: 100%;
+  margin-top: 200px;
+}
+.section3 .sec3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.section3 .sec3 .sec31 {
+  text-align: center;
+}
+.section3 .sec3 .sec31 p {
+  color: gray;
+  font-weight: 300;
+}/*# sourceMappingURL=index.css.map */
