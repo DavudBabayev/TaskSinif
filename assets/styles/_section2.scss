@@ -18,8 +18,9 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
+            gap: 50px;
             div{
-                flex: 1 1 calc(30% - 50px);
+                flex: 1 1 calc(27% - 50px);
                 padding: 15px;
                 display: flex;
                 flex-direction: column;

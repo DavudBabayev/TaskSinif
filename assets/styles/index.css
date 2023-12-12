@@ -24,6 +24,8 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 99;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.5s ease;
 }
 nav a {
   color: white;
@@ -97,7 +99,7 @@ nav .nav2 .menu .drop:hover .drop-menu {
   flex-direction: column;
   gap: 20px;
 }
-nav .nav2 .click {
+nav .nav2 #click {
   font-size: 24px;
   color: white;
   display: none;
@@ -113,7 +115,7 @@ nav .nav2 .click {
   nav .nav2 .menu {
     display: none;
   }
-  nav .nav2 .click {
+  nav .nav2 #click {
     display: flex;
   }
 }
@@ -192,9 +194,10 @@ nav .nav2 .click {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 50px;
 }
 .section2 .sec2 .sec22 div {
-  flex: 1 1 calc(30% - 50px);
+  flex: 1 1 calc(27% - 50px);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -223,7 +226,8 @@ nav .nav2 .click {
 }
 .section3 {
   width: 100%;
-  margin-top: 200px;
+  padding: 100px 0;
+  background-color: #f9f9ff;
 }
 .section3 .sec3 {
   width: 100%;
@@ -239,4 +243,251 @@ nav .nav2 .click {
 .section3 .sec3 .sec31 p {
   color: gray;
   font-weight: 300;
+}
+.section3 .sec3 .sec32 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.section3 .sec3 .sec32 div {
+  flex: 1 1 calc(30% - 50px);
+  padding: 15px;
+  background-color: white;
+  transition: 0.5s ease;
+}
+.section3 .sec3 .sec32 div h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.section3 .sec3 .sec32 div p {
+  font-size: 14px;
+  color: gray;
+  margin: 20px 0;
+}
+.section3 .sec3 .sec32 div:hover {
+  background-color: orange;
+  box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) {
+  .section3 .sec3 .sec32 div {
+    flex: 1 1 calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .section3 .sec3 .sec32 div {
+    flex: 1 1 calc(100% - 50px);
+  }
+}
+.section4 {
+  width: 100%;
+  background-color: #f9f9ff;
+  padding: 100px 0;
+}
+.section4 .sec4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.section4 .sec4 .sec41 {
+  text-align: center;
+}
+.section4 .sec4 .sec41 p {
+  color: gray;
+  margin-top: 50px;
+}
+.section4 .sec4 .sec42 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.section4 .sec4 .sec42 div {
+  flex: 1 1 calc(25% - 50px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.section4 .sec4 .sec42 div aside {
+  width: 100%;
+  overflow: hidden;
+}
+.section4 .sec4 .sec42 div aside img {
+  transition: 0.5s ease;
+  width: 100%;
+  height: auto;
+}
+.section4 .sec4 .sec42 div h4 {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.section4 .sec4 .sec42 div span {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.section4 .sec4 .sec42 div p {
+  color: gray;
+}
+.section4 .sec4 .sec42 div main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.section4 .sec4 .sec42 div main h5 {
+  font-weight: 400;
+  color: gray;
+}
+.section4 .sec4 .sec42 div:hover aside img {
+  transform: scale(1.1);
+}
+.section4 .sec4 .sec42 div:hover h4 {
+  color: orange;
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) {
+  .section4 .sec4 .sec42 div {
+    flex: 1 1 calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .section4 .sec4 .sec42 div {
+    flex: 1 1 calc(100% - 50px);
+  }
+}
+footer {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #04091e;
+  color: white;
+}
+footer p {
+  color: gray;
+  font-size: 14px;
+}
+footer .footcon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+footer .footcon .last {
+  padding-left: 200px;
+}
+footer .footcon div {
+  flex: 1 1 calc(30% - 30px);
+}
+footer .footcon div span {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+footer .footcon div span input {
+  width: calc(100% - 40px);
+  padding: 5px;
+}
+footer .footcon div span i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: orange;
+  cursor: pointer;
+}
+footer .footcon div ul i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+footer .footcon div ul i:hover {
+  color: orange;
+}
+
+@media screen and (max-width: 936px) {
+  footer .footcon div {
+    flex: 1 1 calc(50% - 30px);
+  }
+  footer .footcon .last {
+    margin-top: 50px;
+    padding-left: 0;
+  }
+}
+.menu-bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  display: none;
+}
+.menu-bg .menu-div {
+  width: 20%;
+  height: 100vh;
+  background-color: black;
+  padding: 30px;
+}
+.menu-bg .menu-div .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-bg .menu-div .menu li {
+  cursor: pointer;
+}
+.menu-bg .menu-div .menu a {
+  color: white;
+}
+.menu-bg .menu-div .menu a:hover {
+  color: orange;
+  transition: all 0.3s ease;
+}
+.menu-bg .menu-div .menu .drop {
+  position: relative;
+}
+.menu-bg .menu-div .menu .drop .drop-menu {
+  background-color: white;
+  position: absolute;
+  width: 140px;
+  padding: 14px;
+  left: 0;
+  top: 30px;
+  opacity: 0;
+  display: flex;
+  transition: opacity 0.5s ease;
+}
+.menu-bg .menu-div .menu .drop .drop-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+}
+.menu-bg .menu-div .menu .drop .drop-menu a:hover {
+  color: orange;
+  transition: all 0.3s ease;
+}
+.menu-bg .menu-div .menu .drop:hover .drop-menu {
+  z-index: 100;
+  opacity: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-bg p {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
