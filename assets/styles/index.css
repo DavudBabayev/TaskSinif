@@ -48,6 +48,9 @@ nav .nav1 a {
 nav .nav1 a:hover {
   color: orange;
 }
+nav .nav1 ul i {
+  cursor: pointer;
+}
 nav .nav2 {
   display: flex;
   justify-content: space-between;
@@ -221,7 +224,7 @@ nav .nav2 #click {
 
 @media screen and (max-width: 768px) {
   .section2 .sec2 .sec22 div {
-    flex: 1 1 calc(80% - 50px);
+    flex: 1 1 calc(100% - 50px);
   }
 }
 .section3 {
