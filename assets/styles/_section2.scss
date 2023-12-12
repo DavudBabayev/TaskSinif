@@ -1,54 +1,124 @@
-.section2{
+.section2 {
     width: 100%;
-    .sec2{
+
+    .sec2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 100px;
         padding-top: 100px;
-        .sec21{
+
+        .sec21 {
             text-align: center;
-            p{
+
+            p {
                 color: gray;
                 font-weight: 300;
             }
         }
-        .sec22{
+
+        .sec22 {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             gap: 50px;
-            div{
+
+            div {
                 flex: 1 1 calc(27% - 50px);
-                padding: 15px;  
+                padding: 15px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 transition: 0.5s ease;
-                img{
+                position: relative;
+
+                #heart {
+                    position: absolute;
+                    color: red;
+                    font-size: 20px;
+                    top: 20px;
+                    right: 30px;
+                    cursor: pointer;
+                }
+
+                #heartFill {
+                    position: absolute;
+                    color: red;
+                    font-size: 20px;
+                    top: 20px;
+                    right: 30px;
+                    cursor: pointer;
+                    opacity: 0;
+                }
+
+                img {
                     width: 100%;
                     height: auto;
                 }
-                a{
+
+                a {
                     color: black;
                 }
-                p{
+
+                p {
                     font-size: 14px;
                     color: gray;
                 }
-                &:hover{
+
+                &:hover {
                     background-color: orange;
+                }
+
+                span {
+                    margin-top: 20px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        width: 30%;
+                        height: 30px;
+                        color: white;
+                        button {
+                            width: 100%;
+                            height: 100%;
+                            color: white;
+                            border: none;
+                        }
+
+                        .delete {
+
+                            background-color: red;
+                        }
+
+                        .update {
+                            background-color: green;
+                        }
+
+                        .info {
+                            background-color: blue;
+                        }
+                    }
                 }
             }
         }
+        .load{
+            margin-top: -70px;
+            width: 150px;
+            height: 30px;
+            background-color: blue;
+            border: none;
+            color: white;
+        }
     }
 }
+
 @media screen and (max-width:768px) {
-    .section2{
-        .sec2{
-            .sec22{
-                div{
+    .section2 {
+        .sec2 {
+            .sec22 {
+                div {
                     flex: 1 1 calc(100% - 50px);
                 }
             }

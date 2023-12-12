@@ -1,0 +1,53 @@
+
+
+form {
+    width: 400px;
+    height: 40vh;
+    padding: 10px 40px;
+    background-color: rgb(245, 245, 245);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    left: 37.5%;
+    top: 30vh;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    color: white;
+    background-image: -webkit-linear-gradient(0deg, #f0a415 0%, #22b7f6 100%);
+  }
+  form img {
+    border-radius: 9999999px;
+    width: 120px;
+    height: 120px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  form p {
+    position: relative;
+    right: -340px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  form h4,
+  form h3 {
+    font-weight: 400;
+  }
+  form .txt {
+    width: 400px;
+    height: 25px;
+    padding-left: 5px;
+  }
+  form .sbmt {
+    margin-top: 10px;
+    width: 411px;
+    height: 35px;
+    background-color: blue;
+    color: white;
+    border: none;
+  }

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container {
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1200px;
+  }
+
+  .section2 {
+    margin: auto;
+    width: 30%;
+  }
+  .section2 .sec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding-top: 100px;
+  }
+  .section2 .sec2 .sec21 {
+    text-align: center;
+  }
+  .section2 .sec2 .sec22 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .section2 .sec2 .sec22 div {
+    flex: 1 1 calc(27% - 50px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.5s ease;
+    position: relative;
+  }
+  .section2 .sec2 .sec22 div #heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .section2 .sec2 .sec22 div #heartFill {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  .section2 .sec2 .sec22 div img {
+    width: 100%;
+    height: auto;
+  }
+  .section2 .sec2 .sec22 div a {
+    color: black;
+  }
+  .section2 .sec2 .sec22 div p {
+    font-size: 14px;
+    color: gray;
+  }
+  .section2 .sec2 .sec22 div:hover {
+    background-color: orange;
+  }
+  .section2 .sec2 .sec22 div span {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .section2 .sec2 .sec22 div span button {
+    width: 30%;
+    height: 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .section2 .sec2 .sec22 div span .delete {
+    background-color: red;
+  }
+  .section2 .sec2 .sec22 div span .update {
+    background-color: green;
+  }
+  .section2 .sec2 .sec22 div span .info {
+    background-color: blue;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .section2 .sec2 .sec22 div {
+      flex: 1 1 calc(100% - 50px);
+    }
+  }

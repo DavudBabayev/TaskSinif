@@ -84,10 +84,11 @@ nav .nav2 .menu .drop .drop-menu {
   top: 30px;
   opacity: 0;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   transition: opacity 0.5s ease;
 }
 nav .nav2 .menu .drop .drop-menu a {
-  text-decoration: none;
   color: black;
   font-weight: 400;
   font-size: 12px;
@@ -99,8 +100,6 @@ nav .nav2 .menu .drop .drop-menu a:hover {
 nav .nav2 .menu .drop:hover .drop-menu {
   z-index: 100;
   opacity: 1;
-  flex-direction: column;
-  gap: 20px;
 }
 nav .nav2 #click {
   font-size: 24px;
@@ -206,6 +205,24 @@ nav .nav2 #click {
   flex-direction: column;
   gap: 20px;
   transition: 0.5s ease;
+  position: relative;
+}
+.section2 .sec2 .sec22 div #heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+.section2 .sec2 .sec22 div #heartFill {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  opacity: 0;
 }
 .section2 .sec2 .sec22 div img {
   width: 100%;
@@ -220,6 +237,40 @@ nav .nav2 #click {
 }
 .section2 .sec2 .sec22 div:hover {
   background-color: orange;
+}
+.section2 .sec2 .sec22 div span {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section2 .sec2 .sec22 div span a {
+  width: 30%;
+  height: 30px;
+  color: white;
+}
+.section2 .sec2 .sec22 div span a button {
+  width: 100%;
+  height: 100%;
+  color: white;
+  border: none;
+}
+.section2 .sec2 .sec22 div span a .delete {
+  background-color: red;
+}
+.section2 .sec2 .sec22 div span a .update {
+  background-color: green;
+}
+.section2 .sec2 .sec22 div span a .info {
+  background-color: blue;
+}
+.section2 .sec2 .load {
+  margin-top: -70px;
+  width: 150px;
+  height: 30px;
+  background-color: blue;
+  border: none;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
