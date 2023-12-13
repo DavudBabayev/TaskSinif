@@ -1,18 +1,19 @@
-ul{
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.container{
+.container {
     margin: auto;
     padding: 0 32px;
     max-width: 1200px;
@@ -26,7 +27,7 @@ a{
 @import "footer";
 @import "menu";
 
-.up{
+.up {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -39,8 +40,40 @@ a{
     font-size: 25px;
     transition: all 0.5s ease;
 }
-.add{
+
+.add {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 999999px;
+    background-color: orange;
+    border: none;
+    transition: all 0.5s ease;
+    font-size: 25px;
+    
+    &:hover {
+        width: 100px;
+        border-radius: 50px;
+        &::after{
+            content: "Add";
+            font-size: 16px;
+        }
+    }
+}
+
+.fav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     bottom: 70px;
     right: 20px;
     cursor: pointer;
@@ -49,6 +82,16 @@ a{
     border-radius: 999999px;
     background-color: orange;
     border: none;
-    font-size: 25px;
     transition: all 0.5s ease;
+    font-size: 20px;
+    color: red;
+    
+    &:hover {
+        width: 150px;
+        border-radius: 50px;
+        &::after{
+            content: "Favorites";
+            font-size: 16px;
+        }
+    }
 }

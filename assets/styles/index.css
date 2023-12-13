@@ -192,6 +192,13 @@ nav .nav2 #click {
   color: gray;
   font-weight: 300;
 }
+.section2 .sec2 select {
+  width: 150px;
+  height: 30px;
+  background-color: orange;
+  border: none;
+  color: white;
+}
 .section2 .sec2 .sec22 {
   width: 100%;
   display: flex;
@@ -567,6 +574,36 @@ footer .footcon div ul i:hover {
 
 .add {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 999999px;
+  background-color: orange;
+  border: none;
+  transition: all 0.5s ease;
+  font-size: 25px;
+}
+.add:hover {
+  width: 100px;
+  border-radius: 50px;
+}
+.add:hover::after {
+  content: "Add";
+  font-size: 16px;
+}
+
+.fav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   bottom: 70px;
   right: 20px;
   cursor: pointer;
@@ -575,6 +612,15 @@ footer .footcon div ul i:hover {
   border-radius: 999999px;
   background-color: orange;
   border: none;
-  font-size: 25px;
   transition: all 0.5s ease;
+  font-size: 20px;
+  color: red;
+}
+.fav:hover {
+  width: 150px;
+  border-radius: 50px;
+}
+.fav:hover::after {
+  content: "Favorites";
+  font-size: 16px;
 }/*# sourceMappingURL=index.css.map */
