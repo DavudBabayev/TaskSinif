@@ -196,6 +196,7 @@ nav .nav2 #click {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
 }
 .section2 .sec2 .sec22 div {
