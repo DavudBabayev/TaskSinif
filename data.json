@@ -54,5 +54,19 @@
       "link": "Preventive Maintenance",
       "text": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
     }
+  ],
+  "favs": [
+    {
+      "id": 1,
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAGCAYAAAChOJL3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAxSURBVEhLY/wPBAyjgKbg06dPUBYEMEHpUUBHMBroAwBGA30AwGigDwAYDXS6AwYGAN8NBt4lyiVtAAAAAElFTkSuQmCC",
+      "link": "Alien",
+      "text": "ga...."
+    },
+    {
+      "id": 2,
+      "image": "https://preview.colorlib.com/theme/security/img/s2.jpg.webp",
+      "link": "Basic & Common Repairs",
+      "text": "Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
+    }
   ]
 }

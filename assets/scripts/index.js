@@ -57,8 +57,8 @@ fetch('http://localhost:3000/card')
         <a href="../update.html?id=${card.id}"><button class="update"><i class="bi bi-arrow-repeat"></i> Update</button></a>
         <a href="../info.html?id=${card.id}"><button class="info"><i class="bi bi-info-circle"></i> Info</button></a>
     </span>
-    <i class="bi bi-heart" id="heart"></i>
-    <i class="bi bi-heart-fill" id="heartFill"></i>
+    <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
+    
     </div>
     `})
     })
@@ -95,4 +95,14 @@ window.addEventListener('scroll', ()=>{
         document.querySelector('.up').style.right = "-100px"
         document.querySelector('.add').style.bottom = "20px"
     }
-})
+});
+
+//////////FAVORITES//////////
+
+function addFav(id){
+    console.log("test");
+    axios.get("http://localhost:3000/card/"+id)
+    .then(res => {
+        axios.post("http://localhost:3000/favs", res.data)
+    })
+}

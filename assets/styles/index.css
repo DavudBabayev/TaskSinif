@@ -211,20 +211,13 @@ nav .nav2 #click {
 }
 .section2 .sec2 .sec22 div #heart {
   position: absolute;
+  background-color: transparent;
+  border: none;
   color: red;
   font-size: 20px;
   top: 20px;
   right: 30px;
   cursor: pointer;
-}
-.section2 .sec2 .sec22 div #heartFill {
-  position: absolute;
-  color: red;
-  font-size: 20px;
-  top: 20px;
-  right: 30px;
-  cursor: pointer;
-  opacity: 0;
 }
 .section2 .sec2 .sec22 div img {
   width: 100%;
