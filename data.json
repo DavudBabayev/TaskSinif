@@ -2,9 +2,9 @@
   "card": [
     {
       "id": 1,
-      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAGCAYAAAChOJL3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAxSURBVEhLY/wPBAyjgKbg06dPUBYEMEHpUUBHMBroAwBGA30AwGigDwAYDXS6AwYGAN8NBt4lyiVtAAAAAElFTkSuQmCC",
-      "link": "Alien",
-      "text": "ga...."
+      "image": "https://preview.colorlib.com/theme/security/img/s1.jpg.webp",
+      "link": "Basic & Common Repairs",
+      "text": " Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical."
     },
     {
       "id": 2,
