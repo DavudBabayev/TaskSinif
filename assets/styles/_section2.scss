@@ -26,6 +26,7 @@
 
             div {
                 flex: 1 1 calc(27% - 50px);
+                max-width: 34%;
                 padding: 15px;
                 display: flex;
                 flex-direction: column;
@@ -120,6 +121,7 @@
             .sec22 {
                 div {
                     flex: 1 1 calc(100% - 50px);
+                    max-width: 100%;
                 }
             }
         }

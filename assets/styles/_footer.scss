@@ -1,31 +1,38 @@
-footer{
+footer {
     width: 100%;
     padding: 100px 0;
-    background-color:#04091e;
+    background-color: #04091e;
     color: white;
-    p{
+
+    p {
         color: gray;
         font-size: 14px;
     }
-    .footcon{
+
+    .footcon {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        .last{
+
+        .last {
             padding-left: 200px;
         }
-        div{
+
+        div {
             flex: 1 1 calc(30% - 30px);
-            span{
+
+            span {
                 width: 100%;
                 height: 40px;
                 display: flex;
-                input{
+
+                input {
                     width: calc(100% - 40px);
                     padding: 5px;
                 }
-                i{
+
+                i {
                     width: 40px;
                     height: 40px;
                     display: flex;
@@ -36,11 +43,13 @@ footer{
                     cursor: pointer;
                 }
             }
-            ul{
-                i{
+
+            ul {
+                i {
                     margin-left: 10px;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         color: orange;
                     }
                 }
@@ -49,14 +58,29 @@ footer{
     }
 }
 
-@media screen and (max-width:936px) {
-    footer{
-        .footcon{
-            div{
+@media screen and (max-width:936px) and (min-width: 500px) {
+    footer {
+        .footcon {
+            div {
                 flex: 1 1 calc(50% - 30px);
             }
-            .last{
-            margin-top: 50px;
+
+            .last {
+                margin-top: 50px;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        .footcon {
+            div {
+                flex: 1 1 calc(100% - 30px);
+            }
+            .last {
+                margin-top: 50px;
                 padding-left: 0;
             }
         }

@@ -13,8 +13,9 @@ fetch(`http://localhost:3000/card/${id}`)
 
             const src = imgInp.files[0];
 
-            const reader = new FileReader();
+            let reader = new FileReader();
 
+            reader.readAsDataURL(src);
             reader.onload = function (e) {
                 const obj = {
                     link: formName.value,
@@ -22,11 +23,10 @@ fetch(`http://localhost:3000/card/${id}`)
                     image: e.target.result
                 };
 
-                axios.post(`http://localhost:3000/card`, obj)
-                    .then(res => console.log(res.data))
-                };
+                axios.patch(`http://localhost:3000/card/${id}`, obj)
+                    .then(res => {console.log(res.data)
+                    window.location = "../index.html";
+                })};
                 
-                window.location = "../index.html";
-            reader.readAsDataURL(src);
         });
     });

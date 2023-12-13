@@ -70,7 +70,29 @@ document.querySelector(".load").addEventListener("click", ()=>{
     showPage()
 })
 
+//////////DELETE//////////
+
   function deleteCard(id){
         axios.delete(`http://localhost:3000/card/${id}`)
         window.location.reload();
     }
+
+//////////UP-BUTTON//////////
+
+document.querySelector('.up').addEventListener('click', ()=>{
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    })
+});
+
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 200){
+        document.querySelector('.up').style.right = "20px"
+        document.querySelector('.add').style.bottom = "70px"
+    }
+    else{
+        document.querySelector('.up').style.right = "-100px"
+        document.querySelector('.add').style.bottom = "20px"
+    }
+})

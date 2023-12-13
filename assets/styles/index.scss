@@ -25,3 +25,30 @@ a{
 @import "section4";
 @import "footer";
 @import "menu";
+
+.up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 999999px;
+    background-color: orange;
+    border: none;
+    font-size: 25px;
+    transition: all 0.5s ease;
+}
+.add{
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 999999px;
+    background-color: orange;
+    border: none;
+    font-size: 25px;
+    transition: all 0.5s ease;
+}
