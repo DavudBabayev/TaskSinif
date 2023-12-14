@@ -62,9 +62,9 @@ function showPage() {
     </div>
     `})
             document.querySelector("#select").addEventListener('change', (e) => {
-                if (e.target.value == "Header") {
+                if (e.target.value == "Ascending") {
                     let dataS = data.sort((a, b) => {
-                        return a.link.localeCompare(b.link);
+                        return (a.id - b.id);
                     });
                     document.querySelector(".sec22").innerHTML = ''
                     data.slice(cardnum - 3, cardnum).forEach(card => {
@@ -85,9 +85,9 @@ function showPage() {
         </div>
         `})
                 }
-                else if (e.target.value == "Text") {
+                else if (e.target.value == "Decending") {
                     let dataS1 = data.sort((a, b) => {
-                        return a.text.toLowerCase().localeCompare(b.text.toLowerCase());
+                        return (b.id - a.id);
                     });
                     document.querySelector(".sec22").innerHTML = ''
                     data.slice(cardnum - 3, cardnum).forEach(card => {
@@ -108,7 +108,7 @@ function showPage() {
         </div>
         `})
                 }
-                else if (e.target.value == 'All'){
+                else if (e.target.value == 'Default'){
                     document.querySelector(".sec22").innerHTML = ''
                     data.slice(cardnum - 3, cardnum).forEach(card => {
                         document.querySelector(".sec22").innerHTML += `
