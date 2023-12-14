@@ -1,3 +1,9 @@
+const security = "http://localhost:3000/card"
+
+
+let searchArray = []
+
+
 //////////NAVBAR//////////
 
 window.addEventListener("scroll", () => {
@@ -37,15 +43,15 @@ window.addEventListener('resize', () => {
 
 //////////DATA//////////
 
-let cardnum = 3;
+let page = 1;
+
 function showPage() {
 
-    fetch('http://localhost:3000/card')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            data.slice(cardnum - 3, cardnum).forEach(card => {
-                document.querySelector(".sec22").innerHTML += `
+    fetch(`${security}?_page=${page}&_limit=3`).then(response => response.json()).then(data => {
+        searchArray.push(data)
+        console.log(data);
+        data.forEach(card => {
+            document.querySelector(".sec22").innerHTML += `
     <div>
     <img src="${card.image}" alt="">
     <a href="#"></a>
@@ -61,14 +67,15 @@ function showPage() {
     
     </div>
     `})
-            document.querySelector("#select").addEventListener('change', (e) => {
-                if (e.target.value == "Ascending") {
-                    let dataS = data.sort((a, b) => {
-                        return (a.id - b.id);
-                    });
-                    document.querySelector(".sec22").innerHTML = ''
-                    data.slice(cardnum - 3, cardnum).forEach(card => {
-                        document.querySelector(".sec22").innerHTML += `
+        document.querySelector("#select").addEventListener('change', (e) => {
+
+            if (e.target.value == "Ascending") {
+                let dataS = data.sort((a, b) => {
+                    return (a.id - b.id);
+                });
+                document.querySelector(".sec22").innerHTML = ''
+                data.forEach(card => {
+                    document.querySelector(".sec22").innerHTML += `
         <div>
         <img src="${card.image}" alt="">
         <a href="#"></a>
@@ -82,51 +89,83 @@ function showPage() {
         </span>
         <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
         
-        </div>
-        `})
+        </div>`
+                })
+            }
+            else if (e.target.value == "Decending") {
+                let dataS1 = data.sort((a, b) => {
+                    return (b.id - a.id);
+                });
+                document.querySelector(".sec22").innerHTML = ''
+                data.forEach(card => {
+                    document.querySelector(".sec22").innerHTML += `
+        <div>
+        <img src="${card.image}" alt="">
+        <a href="#"></a>
+            <h4>${card.link}</h4>
+        </a>
+        <p>${card.text}</p>
+        <span>
+            <a><button  onclick="deleteCard(${card.id})" class="delete"><i class="bi bi-trash"></i> Delete</button></a>
+            <a href="../update.html?id=${card.id}"><button class="update"><i class="bi bi-arrow-repeat"></i> Update</button></a>
+            <a href="../info.html?id=${card.id}"><button class="info"><i class="bi bi-info-circle"></i> Info</button></a>
+        </span>
+        <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
+        
+        </div>`
+                })
+            }
+            else if (e.target.value == 'Default') {
+                document.querySelector(".sec22").innerHTML = ''
+                showPage()
+            }
+        })
+        return searchArray.flat()
+    })
+        .then(data => {
+            document.querySelector("#search").addEventListener("input", (e) => {
+                let value = e.target.value
+                if (value !== null) {
+                    data.filter(s => {
+                        document.querySelector(".sec22").innerHTML = ``
+                        return s.link.toLowerCase().includes(value.toLowerCase())
+                    }).forEach(card => {
+                        document.querySelector(".sec22").innerHTML += `
+                        <div>
+                        <img src="${card.image}" alt="">
+                        <a href="#"></a>
+                            <h4>${card.link}</h4>
+                        </a>
+                        <p>${card.text}</p>
+                        <span>
+                            <a><button  onclick="deleteCard(${card.id})" class="delete"><i class="bi bi-trash"></i> Delete</button></a>
+                            <a href="../update.html?id=${card.id}"><button class="update"><i class="bi bi-arrow-repeat"></i> Update</button></a>
+                            <a href="../info.html?id=${card.id}"><button class="info"><i class="bi bi-info-circle"></i> Info</button></a>
+                        </span>
+                        <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
+                        
+                        </div>`
+                    })
                 }
-                else if (e.target.value == "Decending") {
-                    let dataS1 = data.sort((a, b) => {
-                        return (b.id - a.id);
-                    });
-                    document.querySelector(".sec22").innerHTML = ''
-                    data.slice(cardnum - 3, cardnum).forEach(card => {
+                else {
+                    document.querySelector(".sec22").innerHTML = ``
+                    data.forEach(card => {
                         document.querySelector(".sec22").innerHTML += `
-        <div>
-        <img src="${card.image}" alt="">
-        <a href="#"></a>
-            <h4>${card.link}</h4>
-        </a>
-        <p>${card.text}</p>
-        <span>
-            <a><button  onclick="deleteCard(${card.id})" class="delete"><i class="bi bi-trash"></i> Delete</button></a>
-            <a href="../update.html?id=${card.id}"><button class="update"><i class="bi bi-arrow-repeat"></i> Update</button></a>
-            <a href="../info.html?id=${card.id}"><button class="info"><i class="bi bi-info-circle"></i> Info</button></a>
-        </span>
-        <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
-        
-        </div>
-        `})
-                }
-                else if (e.target.value == 'Default'){
-                    document.querySelector(".sec22").innerHTML = ''
-                    data.slice(cardnum - 3, cardnum).forEach(card => {
-                        document.querySelector(".sec22").innerHTML += `
-        <div>
-        <img src="${card.image}" alt="">
-        <a href="#"></a>
-            <h4>${card.link}</h4>
-        </a>
-        <p>${card.text}</p>
-        <span>
-            <a><button  onclick="deleteCard(${card.id})" class="delete"><i class="bi bi-trash"></i> Delete</button></a>
-            <a href="../update.html?id=${card.id}"><button class="update"><i class="bi bi-arrow-repeat"></i> Update</button></a>
-            <a href="../info.html?id=${card.id}"><button class="info"><i class="bi bi-info-circle"></i> Info</button></a>
-        </span>
-        <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
-        
-        </div>
-        `})
+                        <div>
+                        <img src="${card.image}" alt="">
+                        <a href="#"></a>
+                            <h4>${card.link}</h4>
+                        </a>
+                        <p>${card.text}</p>
+                        <span>
+                            <a><button  onclick="deleteCard(${card.id})" class="delete"><i class="bi bi-trash"></i> Delete</button></a>
+                            <a href="../update.html?id=${card.id}"><button class="update"><i class="bi bi-arrow-repeat"></i> Update</button></a>
+                            <a href="../info.html?id=${card.id}"><button class="info"><i class="bi bi-info-circle"></i> Info</button></a>
+                        </span>
+                        <i class="bi bi-heart" id="heart" onclick="addFav(${card.id})"></i>
+                        
+                        </div>`
+                    })
                 }
             })
         })
@@ -134,7 +173,7 @@ function showPage() {
 showPage()
 
 document.querySelector(".load").addEventListener("click", () => {
-    cardnum += 3;
+    page++;
     showPage()
 })
 
@@ -171,7 +210,7 @@ window.addEventListener('scroll', () => {
 
 function addFav(id) {
     axios.get("http://localhost:3000/card/" + id)
-        .then(res => {  
+        .then(res => {
             axios.post("http://localhost:3000/favs", res.data)
         })
 }

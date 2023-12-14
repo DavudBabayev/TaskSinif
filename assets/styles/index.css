@@ -192,12 +192,22 @@ nav .nav2 #click {
   color: gray;
   font-weight: 300;
 }
-.section2 .sec2 select {
+.section2 .sec2 .search {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section2 .sec2 .search input, .section2 .sec2 .search select {
   width: 150px;
   height: 30px;
+}
+.section2 .sec2 .search select {
   background-color: orange;
   border: none;
   color: white;
+}
+.section2 .sec2 .search input {
+  padding: 5px;
 }
 .section2 .sec2 .sec22 {
   width: 100%;

@@ -17,13 +17,24 @@
                 font-weight: 300;
             }
         }
-        select{
-            width: 150px;
-            height: 30px;
-            background-color: orange;
-            border: none;
-            color: white;
+        .search{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input, select{
+                width: 150px;
+                height: 30px;
+            }
+            select{
+                background-color: orange;
+                border: none;
+                color: white;
+            }
+            input{
+                padding: 5px;
+            }
         }
+        
         .sec22 {
             width: 100%;
             display: flex;
